@@ -1,15 +1,15 @@
 import streamlit as st
-from rag import rag_answer
+from streamlit_app.rag import rag_answer
 import json, time
 
 # Load or init feedback store
-FB_PATH = "../feedback/feedback.json"
+FB_PATH = "../feedback.json"
 try:
     feedback = json.load(open(FB_PATH))
 except FileNotFoundError:
     feedback = []
 
-st.title("Aristotle 📜 RAG Chat")
+st.title("Aristotle RAG Chat")
 
 q = st.text_input("Ask Aristotle…")
 if st.button("Submit"):
