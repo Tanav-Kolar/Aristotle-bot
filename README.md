@@ -23,11 +23,7 @@ An interactive Retrieval-Augmented Generation (RAG) system over Aristotle’s *N
 - **Streamlit Frontend**  
   • Simple chat UI  
   • 👍/👎 feedback buttons  
-  • Persists feedback to JSON
-  
-- **MLOps & CI/CD**  
-  • GitHub Actions to test, build & deploy Streamlit app to Hugging Face Spaces  
-  • Scheduled retraining from user feedback via LoRA adapters  
 
----
+  
+
 
