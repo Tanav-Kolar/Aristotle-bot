@@ -1,6 +1,6 @@
 # Aristotle-bot
 
-An interactive Retrieval-Augmented Generation (RAG) system over Aristotle’s *Nicomachean Ethics*, fine-tuned with LoRA adapters, served via a Streamlit UI (hostable on Hugging Face Spaces), with a full MLOps pipeline including CI/CD and feedback-driven retraining.
+An interactive Retrieval-Augmented Generation (RAG) system over Aristotle’s *Nicomachean Ethics*, fine-tuned with LoRA adapters, served via a Streamlit UI (hostable on Hugging Face Spaces).
 
 ---
 
