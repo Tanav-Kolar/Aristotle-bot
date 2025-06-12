@@ -1,7 +1,7 @@
 import re
 import json
 
-# === Step 1: Load cleaned text ===
+# Load cleaned text data
 with open("data/processed/nicomachean_ethics_cleaned.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
@@ -13,7 +13,7 @@ def parse_corpus(text: str) -> list[dict]:
     """
     entries = []
 
-    # Step 1: locate all 'BOOK <Roman>' markers
+    # locate all 'BOOK <Roman>' markers
     book_pattern = r"\bBOOK\s+([IVXL]+)\b"
     book_matches = list(re.finditer(book_pattern, text))
 
@@ -23,7 +23,7 @@ def parse_corpus(text: str) -> list[dict]:
         end = book_matches[idx + 1].start() if idx + 1 < len(book_matches) else len(text)
         book_text = text[start:end].strip()
 
-        # Step 2: split by lines that start with a section number, e.g. "\n1\n"
+        #split by lines that start with a section number, e.g. "\n1\n"
         sections = re.split(r"\n(?=\d+\n)", book_text)
         for sec in sections:
             m = re.match(r"(\d+)\n(.*)", sec, re.DOTALL)
